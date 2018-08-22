@@ -5,7 +5,7 @@ from my_flask import create_app
 app = create_app()
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
-manager.add_command('runserver', Server(ssl_context='adhoc'))
+manager.add_command('runserver', Server())
 
 if __name__ == '__main__':
     manager.run()
